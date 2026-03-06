@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datenschutzerklärung — PFH Studios</title>
+    <meta name="description" content="Datenschutzerklärung von PFH Studios gemäß DSGVO." />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <canvas id="starCanvas"></canvas>
+
+    <nav id="mainNav">
+        <a href="index.html" class="nav-logo">
+            <div class="nav-logo-mark">PFH</div>
+            PFH-Studios
+        </a>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="imprint.html">Impressum</a></li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary"
+                style="padding:0.5rem 1.2rem;font-size:0.8125rem;">Contact</a>
+            <button id="hamburger" aria-label="Menu"
+                style="display:none;background:none;border:none;cursor:pointer;padding:4px;">
+                <svg width="22" height="22" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="18" x2="21" y2="18" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+    <div id="mobileMenu"
+        style="display:none;position:fixed;top:60px;left:0;right:0;background:rgba(0,0,0,0.97);border-bottom:1px solid rgba(255,255,255,0.08);z-index:99;flex-direction:column;padding:1.5rem 2rem;gap:1rem;">
+        <a href="index.html" style="color:#a1a1aa;text-decoration:none;font-size:1rem;">Home</a>
+        <a href="contact.html" style="color:#a1a1aa;text-decoration:none;font-size:1rem;">Kontakt</a>
+        <a href="imprint.html" style="color:#a1a1aa;text-decoration:none;font-size:1rem;">Impressum</a>
+        <a href="privacy.html" style="color:#fff;text-decoration:none;font-size:1rem;font-weight:600;">Datenschutz</a>
+    </div>
+
+    <!-- Page Header -->
+    <div class="page-header" style="position:relative;z-index:2;">
+        <div class="glow-orb glow-purple"
+            style="width:500px;height:300px;top:50%;left:50%;transform:translate(-50%,-50%);filter:blur(80px);"></div>
+        <div class="container" style="position:relative;z-index:1;">
+            <div class="pill pill-purple" style="margin:0 auto 1.5rem;display:inline-flex;">
+                Legal
+            </div>
+            <h1 class="heading-lg gradient-text fade-up">Datenschutzerklärung</h1>
+            <p class="text-muted fade-up" data-delay="100" style="margin-top:0.75rem;font-size:0.9375rem;">
+                Gemäß DSGVO · Stand: März 2026
+            </p>
+        </div>
+    </div>
+
+    <!-- Legal Content -->
+    <div class="legal-content">
+        <h2>1. Datenschutz auf einen Blick</h2>
+
+        <h3>Allgemeine Hinweise</h3>
+        <p>
+            Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit deinen personenbezogenen Daten
+            passiert, wenn du diese Website besuchst. Personenbezogene Daten sind alle Daten, mit denen du persönlich
+            identifiziert werden kannst. Ausführliche Informationen zum Thema Datenschutz entnimmst du unserer unter
+            diesem Text aufgeführten Datenschutzerklärung.
+        </p>
+
+        <h3>Datenerfassung auf dieser Website</h3>
+        <p>
+            <strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong><br />
+            Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten kannst du
+            dem Impressum dieser Website entnehmen.
+        </p>
+        <p>
+            <strong>Wie erfassen wir deine Daten?</strong><br />
+            Deine Daten werden zum einen dadurch erhoben, dass du uns diese mitteilst — zum Beispiel über unser
+            Kontaktformular. Andere Daten werden automatisch beim Besuch der Website durch unsere IT-Systeme erfasst.
+            Das sind vor allem technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs).
+        </p>
+        <p>
+            <strong>Wofür nutzen wir deine Daten?</strong><br />
+            Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten.
+            Andere Daten können zur Analyse deines Nutzerverhaltens verwendet werden.
+        </p>
+        <p>
+            <strong>Welche Rechte hast du bezüglich deiner Daten?</strong><br />
+            Du hast jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck deiner
+            gespeicherten personenbezogenen Daten zu erhalten. Du hast außerdem ein Recht, die Berichtigung oder
+            Löschung dieser Daten zu verlangen. Hierzu sowie zu weiteren Fragen zum Thema Datenschutz kannst du dich
+            jederzeit an die im Impressum angegebene Adresse wenden.
+        </p>
+
+        <h2>2. Hosting</h2>
+        <p>
+            Diese Website wird bei einem externen Dienstleister gehostet (Hoster). Die personenbezogenen Daten,
+            die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert. Hierbei kann es
+            sich v. a. um IP-Adressen, Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten,
+            Kontaktdaten, Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden, handeln.
+        </p>
+
+        <h2>3. Allgemeine Hinweise und Pflichtinformationen</h2>
+
+        <h3>Datenschutz</h3>
+        <p>
+            Die Betreiber dieser Seiten nehmen den Schutz deiner persönlichen Daten sehr ernst. Wir behandeln deine
+            personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie
+            dieser Datenschutzerklärung.
+        </p>
+        <p>
+            Wenn du diese Website benutzt, werden verschiedene personenbezogene Daten erhoben. Diese
+            Datenschutzerklärung erläutert, welche Daten wir erheben und wofür wir sie nutzen. Sie erläutert auch,
+            wie und zu welchem Zweck das geschieht.
+        </p>
+
+        <h3>Hinweis zur verantwortlichen Stelle</h3>
+        <p>
+            Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:<br /><br />
+            PFH Studios<br />
+            [Dein vollständiger Name]<br />
+            [Straße und Hausnummer]<br />
+            [PLZ] [Ort]<br /><br />
+            E-Mail: <a href="mailto:contact@pfh-games.de">contact@pfh-games.de</a>
+        </p>
+
+        <h3>Speicherdauer</h3>
+        <p>
+            Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben
+            deine personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn du ein
+            berechtigtes Löschersuchen geltend machst oder eine Einwilligung zur Datenverarbeitung widerrufst,
+            werden deine Daten gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung
+            deiner personenbezogenen Daten haben.
+        </p>
+
+        <h3>Deine Rechte als betroffene Person</h3>
+        <p>Du hast folgende Rechte:</p>
+        <ul>
+            <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
+            <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
+            <li>Recht auf Löschung (Art. 17 DSGVO)</li>
+            <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+            <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
+            <li>Recht auf Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
+            <li>Recht auf Widerruf einer Einwilligung (Art. 7 Abs. 3 DSGVO)</li>
+            <li>Beschwerderecht bei der zuständigen Aufsichtsbehörde (Art. 77 DSGVO)</li>
+        </ul>
+
+        <h2>4. Datenerfassung auf dieser Website</h2>
+
+        <h3>Kontaktformular</h3>
+        <p>
+            Wenn du uns per Kontaktformular Anfragen zukommen lässt, werden deine Angaben aus dem
+            Anfrageformular inklusive der von dir angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für
+            den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne deine Einwilligung
+            weiter.
+        </p>
+        <p>
+            Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern deine Anfrage
+            mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen
+            erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der
+            effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO).
+        </p>
+
+        <h3>Anfrage per E-Mail oder Instagram</h3>
+        <p>
+            Wenn du uns per E-Mail oder Instagram kontaktierst, wird deine Anfrage inklusive aller daraus
+            hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung deines
+            Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne deine Einwilligung weiter.
+        </p>
+
+        <h2>5. Externe Dienste</h2>
+
+        <h3>Whop</h3>
+        <p>
+            Für den Verkauf digitaler Produkte nutzen wir die Plattform Whop (<a href="https://whop.com" target="_blank"
+                rel="noopener">whop.com</a>). Bei einem Kauf
+            über Whop gelten deren Datenschutzbestimmungen. Wir empfehlen dir, diese vor einem Kauf zu lesen.
+        </p>
+
+        <h3>Instagram</h3>
+        <p>
+            Wir sind auf Instagram (<a href="https://www.instagram.com" target="_blank"
+                rel="noopener">instagram.com</a>) vertreten. Wenn du unsere Instagram-Seite besuchst,
+            gelten die Datenschutzbestimmungen von Meta (Facebook, Instagram). Wir haben keinen Einfluss auf die
+            Datenverarbeitung durch Meta.
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo" style="margin-bottom:0.5rem;display:inline-flex;">
+                        <div class="nav-logo-mark">PFH</div>
+                        PFH-Studios
+                    </a>
+                    <p>Monetize, Optimize Faster, and Grow Stronger.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Seiten</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="imprint.html">Impressum</a></li>
+                        <li><a href="privacy.html">Datenschutz</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Socials</h4>
+                    <ul>
+                        <li><a href="https://www.instagram.com/pfh_studios" target="_blank" rel="noopener">Instagram</a>
+                        </li>
+                        <li><a href="https://whop.com" target="_blank" rel="noopener">Whop</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 PFH Studios. Alle Rechte vorbehalten.</p>
+                <div style="display:flex;gap:1.25rem;">
+                    <a href="privacy.html">Datenschutz</a>
+                    <a href="imprint.html">Impressum</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function checkMobile() {
+            const h = document.getElementById('hamburger');
+            if (h) h.style.display = window.innerWidth <= 768 ? 'block' : 'none';
+        }
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+    </script>
+    <script src="main.js"></script>
+</body>
+
+</html>

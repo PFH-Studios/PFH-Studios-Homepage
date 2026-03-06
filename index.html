@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PFH Studios — Shadow Operating for Creators</title>
+    <meta name="description"
+        content="Shadow Operating for Instagram Creators. Custom monetization audits, digital product architecture and launch strategy — built specifically for your audience on Whop." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="PFH Studios — Shadow Operating for Creators" />
+    <meta property="og:description"
+        content="I build, launch, and market digital products for Instagram Creators — behind the scenes, fully done-for-you." />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 7rem 2rem 5rem;
+            position: relative;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .hero-nebula {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -60%);
+            width: 700px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(ellipse at 50% 40%,
+                    rgba(147, 51, 234, 0.55) 0%,
+                    rgba(109, 40, 217, 0.3) 30%,
+                    rgba(67, 20, 180, 0.1) 60%,
+                    transparent 75%);
+            filter: blur(60px);
+            animation: nebula-breathe 6s ease-in-out infinite;
+        }
+
+        .hero-nebula-secondary {
+            position: absolute;
+            top: 40%;
+            left: 20%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.18) 0%, transparent 70%);
+            filter: blur(80px);
+            animation: nebula-drift 8s ease-in-out infinite alternate;
+        }
+
+        .hero-nebula-right {
+            position: absolute;
+            top: 40%;
+            right: 5%;
+            width: 280px;
+            height: 280px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+            filter: blur(80px);
+            animation: nebula-drift 10s ease-in-out infinite alternate-reverse;
+        }
+
+        @keyframes nebula-breathe {
+
+            0%,
+            100% {
+                transform: translate(-50%, -60%) scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: translate(-50%, -60%) scale(1.08);
+                opacity: 0.85;
+            }
+        }
+
+        @keyframes nebula-drift {
+            from {
+                transform: translateY(0) scale(1);
+            }
+
+            to {
+                transform: translateY(-20px) scale(1.05);
+            }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.4rem 1rem;
+            background: rgba(147, 51, 234, 0.12);
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--purple-light);
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+            animation: fade-in-down 0.8s ease forwards;
+        }
+
+        @keyframes fade-in-down {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 7vw, 5.5rem);
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -0.04em;
+            max-width: 850px;
+            position: relative;
+            z-index: 2;
+            animation: fade-in-up 0.9s ease 0.1s both;
+        }
+
+        .hero-subtitle {
+            color: var(--gray-400);
+            font-size: clamp(0.9375rem, 2vw, 1.125rem);
+            line-height: 1.7;
+            max-width: 500px;
+            margin: 1.5rem auto 2.5rem;
+            position: relative;
+            z-index: 2;
+            animation: fade-in-up 0.9s ease 0.25s both;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+            animation: fade-in-up 0.9s ease 0.4s both;
+        }
+
+        .hero-btn {
+            padding: 0.85rem 2rem;
+            font-size: 0.9375rem;
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            animation: scroll-bounce 2s ease-in-out infinite;
+        }
+
+        .hero-scroll svg {
+            opacity: 0.4;
+        }
+
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scroll-bounce {
+
+            0%,
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            50% {
+                transform: translateX(-50%) translateY(8px);
+            }
+        }
+
+        /* ===== TRUST BAR ===== */
+        .trust-bar {
+            position: relative;
+            z-index: 2;
+            padding: 3rem 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .trust-bar-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            text-align: center;
+        }
+
+        .trust-item .number {
+            font-size: 2.25rem;
+            font-weight: 900;
+            letter-spacing: -0.04em;
+            background: linear-gradient(135deg, #fff 40%, var(--purple-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .trust-item p {
+            color: var(--gray-400);
+            font-size: 0.8125rem;
+            font-weight: 500;
+            margin-top: 2px;
+        }
+
+        .trust-divider {
+            width: 1px;
+            height: 40px;
+            background: var(--border);
+        }
+
+        /* ===== SERVICES ===== */
+        .services {
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+            padding: 6rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .service-block:last-child {
+            border-bottom: none;
+        }
+
+        .service-block.reverse {
+            direction: rtl;
+        }
+
+        .service-block.reverse>* {
+            direction: ltr;
+        }
+
+        .service-visual {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            background: var(--surface);
+            border: 1px solid var(--border);
+        }
+
+        .service-visual-inner {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-visual .vis-glow {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            filter: blur(60px);
+        }
+
+        .vis-purple {
+            background: radial-gradient(circle, rgba(147, 51, 234, 0.4) 0%, transparent 70%);
+        }
+
+        .vis-blue {
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%);
+        }
+
+        .vis-violet {
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.35) 0%, transparent 70%);
+        }
+
+        /* Audit card mockups inside visuals */
+        .audit-card-mock {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.25rem;
+            width: 210px;
+            position: relative;
+            z-index: 2;
+            backdrop-filter: blur(10px);
+        }
+
+        .audit-card-mock .mock-row {
+            height: 8px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.12);
+            margin-bottom: 6px;
+        }
+
+        .audit-card-mock .mock-row.short {
+            width: 60%;
+        }
+
+        .audit-card-mock .mock-row.medium {
+            width: 80%;
+        }
+
+        .audit-card-mock .mock-row.purple {
+            background: rgba(147, 51, 234, 0.5);
+        }
+
+        .audit-card-mock .mock-title {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .audit-card-mock .mock-chip {
+            display: inline-block;
+            padding: 2px 8px;
+            background: rgba(147, 51, 234, 0.25);
+            border: 1px solid rgba(147, 51, 234, 0.4);
+            border-radius: 20px;
+            font-size: 0.6rem;
+            color: var(--purple-light);
+            margin-right: 4px;
+            margin-bottom: 6px;
+        }
+
+        .service-content {}
+
+        .service-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 0.3rem 0.8rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            font-size: 0.72rem;
+            font-weight: 500;
+            color: var(--gray-400);
+            letter-spacing: 0.02em;
+            margin-bottom: 1.25rem;
+        }
+
+        .service-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 1.5rem;
+        }
+
+        .service-tag {
+            padding: 0.3rem 0.75rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            font-size: 0.75rem;
+            color: var(--gray-400);
+        }
+
+        .service-content p {
+            color: var(--gray-400);
+            font-size: 1rem;
+            line-height: 1.75;
+            margin-top: 1rem;
+        }
+
+        /* ===== WHOP BADGE ===== */
+        .whop-section {
+            position: relative;
+            z-index: 2;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .whop-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 0.6rem 1.5rem;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--gray-300);
+            margin-bottom: 3rem;
+        }
+
+        .whop-badge .whop-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #10b981;
+            box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+            animation: pulse-dot 2s infinite;
+        }
+
+        /* ===== AUDIT SHOWCASE ===== */
+        .audit-section {
+            position: relative;
+            z-index: 2;
+            padding: 6rem 0;
+        }
+
+        .audit-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .audit-header p {
+            color: var(--gray-400);
+            margin-top: 1rem;
+            font-size: 1.0625rem;
+        }
+
+        .audit-showcase {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .audit-showcase::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--purple-glow-strong), transparent);
+        }
+
+        .audit-showcase-glow {
+            position: absolute;
+            bottom: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(147, 51, 234, 0.15) 0%, transparent 70%);
+            filter: blur(60px);
+        }
+
+        .audit-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .audit-meta-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .audit-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--purple), var(--purple-light));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+
+        .audit-meta-text h4 {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .audit-meta-text p {
+            font-size: 0.8125rem;
+            color: var(--gray-400);
+            margin-top: 1px;
+        }
+
+        .audit-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .audit-item {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.25rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            transition: var(--transition);
+        }
+
+        .audit-item:hover {
+            border-color: var(--border-hover);
+            background: rgba(147, 51, 234, 0.05);
+        }
+
+        .audit-item-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .audit-item-icon.purple {
+            background: rgba(147, 51, 234, 0.15);
+        }
+
+        .audit-item-icon.blue {
+            background: rgba(59, 130, 246, 0.15);
+        }
+
+        .audit-item-icon.green {
+            background: rgba(16, 185, 129, 0.15);
+        }
+
+        .audit-item-text h5 {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .audit-item-text p {
+            font-size: 0.8125rem;
+            color: var(--gray-400);
+            margin-top: 2px;
+        }
+
+        .audit-item-status {
+            padding: 0.25rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .status-included {
+            background: rgba(16, 185, 129, 0.12);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.25);
+        }
+
+        .status-launch {
+            background: rgba(147, 51, 234, 0.12);
+            color: var(--purple-light);
+            border: 1px solid rgba(147, 51, 234, 0.25);
+        }
+
+        .status-strategy {
+            background: rgba(59, 130, 246, 0.12);
+            color: #60a5fa;
+            border: 1px solid rgba(59, 130, 246, 0.25);
+        }
+
+        /* ===== HOW IT WORKS ===== */
+        .process-section {
+            position: relative;
+            z-index: 2;
+            padding: 6rem 0;
+        }
+
+        .process-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .process-header p {
+            color: var(--gray-400);
+            margin-top: 1rem;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            position: relative;
+        }
+
+        .process-step {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .process-step:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-3px);
+        }
+
+        .step-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -0.05em;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.25rem;
+        }
+
+        .step-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(147, 51, 234, 0.12);
+            border: 1px solid rgba(147, 51, 234, 0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .process-step h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .process-step p {
+            color: var(--gray-400);
+            font-size: 0.875rem;
+            line-height: 1.7;
+        }
+
+        .step-glow {
+            position: absolute;
+            bottom: -40px;
+            right: -40px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(147, 51, 234, 0.15) 0%, transparent 70%);
+            filter: blur(20px);
+        }
+
+        /* ===== FINAL CTA ===== */
+        .cta-section {
+            position: relative;
+            z-index: 2;
+            padding: 7rem 0 6rem;
+            text-align: center;
+        }
+
+        .cta-card {
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.08) 0%, rgba(109, 40, 217, 0.04) 100%);
+            border: 1px solid rgba(147, 51, 234, 0.2);
+            border-radius: 28px;
+            padding: 5rem 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-card-glow-top {
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 500px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(ellipse, rgba(147, 51, 234, 0.3) 0%, transparent 70%);
+            filter: blur(60px);
+        }
+
+        .cta-card-glow-bottom {
+            position: absolute;
+            bottom: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 200px;
+            border-radius: 50%;
+            background: radial-gradient(ellipse, rgba(109, 40, 217, 0.2) 0%, transparent 70%);
+            filter: blur(60px);
+        }
+
+        .cta-card h2 {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-card p {
+            color: var(--gray-400);
+            font-size: 1.0625rem;
+            max-width: 460px;
+            margin: 1.25rem auto 2.5rem;
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .service-block {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .service-block.reverse {
+                direction: ltr;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .trust-divider {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-bar-inner {
+                gap: 2rem;
+            }
+
+            .cta-card {
+                padding: 3rem 1.5rem;
+            }
+
+            .audit-showcase {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Star Field -->
+    <canvas id="starCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav id="mainNav">
+        <a href="index.html" class="nav-logo">
+            <div class="nav-logo-mark">PFH</div>
+            PFH-Studios
+        </a>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="imprint.html">Imprint</a></li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary"
+                style="padding: 0.5rem 1.2rem; font-size: 0.8125rem;">Contact</a>
+            <button id="hamburger" aria-label="Menu öffnen" aria-expanded="false"
+                style="display:none;background:none;border:none;cursor:pointer;padding:4px;">
+                <svg width="22" height="22" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="18" x2="21" y2="18" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu"
+        style="display:none;position:fixed;top:60px;left:0;right:0;background:rgba(0,0,0,0.97);border-bottom:1px solid rgba(255,255,255,0.08);z-index:99;flex-direction:column;padding:1.5rem 2rem;gap:1rem;">
+        <a href="index.html" style="color:#fff;text-decoration:none;font-size:1rem;font-weight:500;">Home</a>
+        <a href="contact.html" style="color:#a1a1aa;text-decoration:none;font-size:1rem;">Contact</a>
+        <a href="imprint.html" style="color:#a1a1aa;text-decoration:none;font-size:1rem;">Imprint</a>
+        <a href="privacy.html" style="color:#a1a1aa;text-decoration:none;font-size:1rem;">Privacy Policy</a>
+    </div>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero">
+        <div class="hero-nebula"></div>
+        <div class="hero-nebula-secondary"></div>
+        <div class="hero-nebula-right"></div>
+
+        <div class="hero-badge">
+            <span class="pill-dot" style="background: #a855f7;"></span>
+            Shadow Operating
+        </div>
+
+        <h1 class="gradient-text">Digital Products for Creators - Built Behind the Scenes</h1>
+
+        <p class="hero-subtitle">
+            I help Instagram creators turn their audience into digital products.
+        </p>
+
+        <div class="hero-cta">
+            <a href="contact.html" class="btn btn-primary hero-btn">
+                Get in Touch
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </a>
+            <a href="#services" class="btn btn-ghost hero-btn">See how it works</a>
+        </div>
+
+        <div class="hero-scroll">
+            <svg width="24" height="24" fill="none" stroke="white" stroke-width="1.5" viewBox="0 0 24 24">
+                <path d="M12 5v14M5 12l7 7 7-7" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- ===== TRUST BAR ===== -->
+    <section class="trust-bar">
+        <div class="container">
+            <div class="trust-bar-inner">
+
+                <div class="trust-item fade-up">
+                    <div class="number">
+                        <span class="counter" data-target="30" data-suffix="+">0+</span>
+                    </div>
+                    <p>Products published on Whop</p>
+                </div>
+
+                <div class="trust-divider"></div>
+
+                <div class="trust-item fade-up" data-delay="100">
+                    <div class="number">
+                        <span class="counter" data-target="4.8" data-suffix="/5">0</span>
+                    </div>
+                    <p>Average creator rating</p>
+                </div>
+
+                <div class="trust-divider"></div>
+
+                <div class="trust-item fade-up" data-delay="200">
+                    <div class="number">
+                        <span class="counter" data-target="5" data-suffix="+">0+</span>
+                    </div>
+                    <p>Creators worked with</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="services section-padding" id="services">
+        <div class="container">
+
+            <!-- Service 1 -->
+            <div class="service-block fade-up">
+                <div class="service-visual">
+                    <div class="service-visual-inner">
+                        <div class="vis-glow vis-purple" style="top:-40px;left:-40px;"></div>
+                        <div class="audit-card-mock">
+                            <div class="mock-title">🔍 Audience Analysis</div>
+                            <div class="mock-row purple"></div>
+                            <div class="mock-row medium"></div>
+                            <div class="mock-row short"></div>
+                            <div style="margin-top:10px;">
+                                <span class="mock-chip">Product Fit</span>
+                                <span class="mock-chip">Audience Needs</span>
+                            </div>
+                            <div class="mock-row" style="height:6px;margin-top:10px;"></div>
+                            <div class="mock-row short" style="height:6px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <div class="service-label">Step 1 · Monetization Audit</div>
+                    <h2 class="heading-md">Creator Monetization<br>Audit</h2>
+                    <p>
+                        I analyze your audience, content and niche to identify the best digital product opportunities.
+                        The goal is simple: build something your audience actually wants — not just another random
+                        product.
+                    </p>
+                    <div class="service-tags">
+                        <span class="service-tag">Audience Analysis</span>
+                        <span class="service-tag">Product Opportunities</span>
+                        <span class="service-tag">Monetization Strategy</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-block reverse fade-up" data-delay="100">
+                <div class="service-visual">
+                    <div class="service-visual-inner">
+                        <div class="vis-glow vis-violet" style="bottom:-40px;right:-40px;"></div>
+                        <div class="audit-card-mock">
+                            <div class="mock-title">📦 Product Structure</div>
+                            <div class="mock-row medium"></div>
+                            <div class="mock-row short"
+                                style="height:20px;border-radius:6px;background:rgba(147,51,234,0.3);"></div>
+                            <div style="margin-top:10px;">
+                                <span class="mock-chip">Systems</span>
+                                <span class="mock-chip">Guides</span>
+                                <span class="mock-chip">Frameworks</span>
+                            </div>
+                            <div class="mock-row" style="height:6px;margin-top:10px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <div class="service-label">Step 2 · Product Creation</div>
+                    <h2 class="heading-md">Digital Product<br>Architecture</h2>
+                    <p>
+                        I design the structure of your digital product — including the framework, modules,
+                        positioning and pricing. The goal is not just information, but a clear system your audience can
+                        use.
+                    </p>
+                    <div class="service-tags">
+                        <span class="service-tag">Study Systems</span>
+                        <span class="service-tag">Guides & Frameworks</span>
+                        <span class="service-tag">Creator Toolkits</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-block fade-up" data-delay="200">
+                <div class="service-visual">
+                    <div class="service-visual-inner">
+                        <div class="vis-glow vis-blue" style="top:-20px;right:-40px;"></div>
+                        <div class="audit-card-mock">
+                            <div class="mock-title">🚀 Launch System</div>
+                            <div style="display:flex;flex-direction:column;gap:5px;margin-top:4px;">
+                                <div style="display:flex;align-items:center;gap:6px;">
+                                    <div style="width:8px;height:8px;border-radius:50%;background:#34d399;"></div>
+                                    <div class="mock-row" style="height:6px;flex:1;margin:0;"></div>
+                                </div>
+                                <div style="display:flex;align-items:center;gap:6px;">
+                                    <div
+                                        style="width:8px;height:8px;border-radius:50%;background:rgba(147,51,234,0.8);">
+                                    </div>
+                                    <div class="mock-row medium" style="height:6px;flex:1;margin:0;"></div>
+                                </div>
+                                <div style="display:flex;align-items:center;gap:6px;">
+                                    <div
+                                        style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.2);">
+                                    </div>
+                                    <div class="mock-row short" style="height:6px;flex:1;margin:0;"></div>
+                                </div>
+                            </div>
+                            <div style="margin-top:10px;">
+                                <span class="mock-chip">Warm Up</span>
+                                <span class="mock-chip">Launch</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-content">
+                    <div class="service-label">Step 3 · Product Launch</div>
+                    <h2 class="heading-md">Creator Launch<br>Strategy</h2>
+                    <p>
+                        I design a structured launch plan that builds interest before the product goes live.
+                        The launch is integrated into your content so the product feels natural for your audience.
+                    </p>
+                    <div class="service-tags">
+                        <span class="service-tag">Story Launch Strategy</span>
+                        <span class="service-tag">Audience Warm-Up</span>
+                        <span class="service-tag">Product Release</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== WHOP BADGE ===== -->
+    <div class="divider"></div>
+    <section class="whop-section">
+        <div class="container">
+            <div class="fade-up">
+                <div class="whop-badge">
+                    <span class="whop-dot"></span>
+                    All products will be Launched &amp; marketed on Whop
+                </div>
+                <p class="text-muted" style="max-width: 450px; margin: 0 auto; font-size: 0.9375rem; line-height: 1.7;">
+                    Whop is the Leading Platform for Digital products - with built in Revenue Share, Checkout Links,
+                    Promo-Codes, ...
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== AUDIT SHOWCASE ===== -->
+    <div class="divider"></div>
+    <section class="audit-section">
+        <div class="container">
+
+            <div class="audit-header fade-up">
+                <div class="pill pill-purple" style="margin: 0 auto 1rem;">
+                    <span class="pill-dot"></span>
+                    Creator Monetization Audit
+                </div>
+
+                <h2 class="heading-lg">Inside the Monetization Audit</h2>
+
+                <p>
+                    Every creator partnership begins with a structured analysis of your audience,
+                    niche and product opportunities. This audit identifies the best digital product
+                    direction for your account.
+                </p>
+            </div>
+
+
+            <div class="audit-showcase fade-up" data-delay="150">
+                <div class="audit-showcase-glow"></div>
+
+                <div class="audit-meta">
+                    <div class="audit-meta-left">
+                        <div class="audit-icon">📊</div>
+                        <div class="audit-meta-text">
+                            <h4>Creator Monetization Report</h4>
+                            <p>Strategic product blueprint for your account</p>
+                        </div>
+                    </div>
+
+                    <span class="audit-item-status status-included">Included</span>
+                </div>
+
+
+                <div class="audit-items">
+
+                    <!-- 1 -->
+                    <div class="audit-item">
+                        <div class="audit-item-icon purple">👤</div>
+
+                        <div class="audit-item-text">
+                            <h5>Creator Overview</h5>
+                            <p>
+                                Analysis of your niche, content style and audience profile
+                                to understand your current creator positioning.
+                            </p>
+                        </div>
+
+                        <span class="audit-item-status status-included">Step 1</span>
+                    </div>
+
+
+                    <!-- 2 -->
+                    <div class="audit-item">
+                        <div class="audit-item-icon blue">📈</div>
+
+                        <div class="audit-item-text">
+                            <h5>The Opportunity (Demand Analysis)</h5>
+                            <p>
+                                Identification of problems your audience wants solved
+                                and the digital product demand within your niche.
+                            </p>
+                        </div>
+
+                        <span class="audit-item-status status-included">Step 2</span>
+                    </div>
+
+
+                    <!-- 3 -->
+                    <div class="audit-item">
+                        <div class="audit-item-icon green">💰</div>
+
+                        <div class="audit-item-text">
+                            <h5>The Numbers (Revenue Potential)</h5>
+                            <p>
+                                Estimation of realistic product revenue potential
+                                based on audience size, engagement and niche demand.
+                            </p>
+                        </div>
+
+                        <span class="audit-item-status status-included">Step 3</span>
+                    </div>
+
+
+                    <!-- 4 -->
+                    <div class="audit-item">
+                        <div class="audit-item-icon purple">💡</div>
+
+                        <div class="audit-item-text">
+                            <h5>Product Suggestions</h5>
+                            <p>
+                                3–5 specific digital product ideas designed for your audience
+                                and content ecosystem.
+                            </p>
+                        </div>
+
+                        <span class="audit-item-status status-included">Step 4</span>
+                    </div>
+
+
+                    <!-- 5 -->
+                    <div class="audit-item">
+                        <div class="audit-item-icon blue">🚀</div>
+
+                        <div class="audit-item-text">
+                            <h5>Implementation Plan</h5>
+                            <p>
+                                A structured launch roadmap based on the
+                                14-Day Instagram Story Sequence.
+                            </p>
+                        </div>
+
+                        <span class="audit-item-status status-launch">Step 5</span>
+                    </div>
+
+
+                    <!-- 6 -->
+                    <div class="audit-item">
+                        <div class="audit-item-icon green">✅</div>
+
+                        <div class="audit-item-text">
+                            <h5>Immediate Validation</h5>
+                            <p>
+                                A test carousel designed to validate audience demand
+                                before building the full product.
+                            </p>
+                        </div>
+
+                        <span class="audit-item-status status-strategy">Step 6</span>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ===== HOW IT WORKS ===== -->
+    <div class="divider"></div>
+    <section class="process-section">
+        <div class="container">
+            <div class="process-header fade-up">
+
+                <div class="pill pill-purple" style="margin: 0 auto 1rem;">
+                    <span class="pill-dot"></span>
+                    The Process
+                </div>
+
+                <h2 class="heading-lg">
+                    From Creator Audience<br>to Digital Product
+                </h2>
+
+                <p>
+                    A simple and structured process for turning your audience
+                    into a real digital product.
+                </p>
+
+            </div>
+
+            <div class="process-steps">
+
+                <!-- STEP 1 -->
+                <div class="process-step fade-up" data-delay="0">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">📊</div>
+
+                    <h3>Monetization Audit</h3>
+
+                    <p>
+                        We analyze your audience, niche and content positioning
+                        to identify the best digital product opportunity
+                        for your account.
+                    </p>
+
+                    <div class="step-glow"></div>
+                </div>
+
+
+                <!-- STEP 2 -->
+                <div class="process-step fade-up" data-delay="100">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">📦</div>
+
+                    <h3>Product Creation</h3>
+
+                    <p>
+                        I design and build the structure of your digital product —
+                        including the framework, positioning and platform setup.
+                    </p>
+
+                    <div class="step-glow"></div>
+                </div>
+
+
+                <!-- STEP 3 -->
+                <div class="process-step fade-up" data-delay="200">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">🚀</div>
+
+                    <h3>Creator Launch</h3>
+
+                    <p>
+                        We prepare the launch using a structured content
+                        and story sequence strategy to introduce the product
+                        naturally to your audience.
+                    </p>
+
+                    <div class="step-glow"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="cta-section">
+        <div class="container">
+
+            <div class="cta-card fade-up">
+
+                <div class="cta-card-glow-top"></div>
+                <div class="cta-card-glow-bottom"></div>
+
+                <div class="pill pill-purple" style="margin-bottom: 1.5rem;">
+                    <span class="pill-dot"></span>
+                    Creator Partnerships
+                </div>
+
+                <h2 class="heading-lg gradient-text">
+                    Ready to Turn Your Audience<br>
+                    Into a Digital Product?
+                </h2>
+
+                <p>
+                    If you have an engaged audience and want to explore
+                    digital products, let's start with a simple conversation
+                    about your creator monetization opportunities.
+                </p>
+
+
+                <div class="cta-buttons">
+
+                    <a href="contact.html" class="btn btn-primary" style="padding: 0.9rem 2.25rem; font-size: 1rem;">
+                        Get in Touch
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"
+                            viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+
+
+                    <a href="https://www.instagram.com/pfh_studios" target="_blank" rel="noopener"
+                        class="btn btn-outline" style="padding: 0.9rem 2.25rem; font-size: 1rem;">
+
+                        Visit Instagram
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo" style="margin-bottom: 0.5rem; display: inline-flex;">
+                        <div class="nav-logo-mark">PFH</div>
+                        PFH Studios
+                    </a>
+
+                    <p>
+                        Digital products for creators - built behind the scenes.
+                        PFH Studios focuses on building product systems and launch
+                        strategies for creator audiences.
+                    </p>
+                </div>
+
+
+                <!-- Pages -->
+                <div class="footer-col">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- Legal -->
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="imprint.html">Imprint</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- Social -->
+                <div class="footer-col">
+                    <h4>Platforms</h4>
+                    <ul>
+                        <li>
+                            <a href="https://www.instagram.com/pfh_studios" target="_blank" rel="noopener">
+                                Instagram
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://whop.com/@pfh-studios/" target="_blank" rel="noopener">
+                                Whop
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 PFH Studios · Shadow Operator
+                </p>
+
+                <div style="display:flex;gap:1.25rem;">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="imprint.html">Imprint</a>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        // Mobile hamburger visibility
+        function checkMobile() {
+            const hamburger = document.getElementById('hamburger');
+            if (hamburger) hamburger.style.display = window.innerWidth <= 768 ? 'block' : 'none';
+        }
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+    </script>
+    <script src="main.js"></script>
+</body>
+
+</html>
